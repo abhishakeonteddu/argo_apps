@@ -8,7 +8,7 @@ spec:
   - group: '*'
     kind: '*'
   destinations:
-  - namespace: sample-app
+  - namespace: test
     server: https://kubernetes.default.svc
   orphanedResources:
     warn: false
