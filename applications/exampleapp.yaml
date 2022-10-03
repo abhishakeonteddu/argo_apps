@@ -2,12 +2,12 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: example
-  namespace: test
+  namespace: argocd
 spec:
   destination:
     namespace: test
     server: https://kubernetes.default.svc
-  project: default
+  project: sample-project
   source:
     path: charts/helm-example
     repoURL: https://github.com/abhishakeonteddu/gitopps_repo.git
