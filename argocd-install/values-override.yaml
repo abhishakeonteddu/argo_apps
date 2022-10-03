@@ -35,7 +35,7 @@ server:
     
     - name: argocd-apps
       namespace: argocd
-      destination: applications
+      destination:
         namespace: argocd
         server: https://kubernetes.default.svc
       project: argocd
