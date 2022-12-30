@@ -15,9 +15,9 @@ server:
         url: https://argoproj.github.io/argo-helm
   additionalApplications: 
     - name: argocd
-      namespace: argocd
+      namespace: argo-cd
       destination:
-        namespace: argocd
+        namespace: argo-cd
         server: https://kubernetes.default.svc
       project: argocd
       source:
@@ -34,9 +34,9 @@ server:
         - CreateNamespace=true
     
     - name: argocd-apps
-      namespace: argocd
+      namespace: argo-cd
       destination:
-        namespace: argocd
+        namespace: argo-cd
         server: https://kubernetes.default.svc
       project: argocd
       source:
@@ -52,9 +52,9 @@ server:
           prune: true
     
     - name: argocd-appprojects
-      namespace: argocd
+      namespace: argo-cd
       destination:
-        namespace: argocd
+        namespace: argo-cd
         server: https://kubernetes.default.svc
       project: argocd
       source:
@@ -71,14 +71,14 @@ server:
      
   additionalProjects: 
   - name: argocd
-    namespace: argocd
+    namespace: argo-cd
     additionalLabels: {}
     additionalAnnotations: {}
     description: Argocd Project
     sourceRepos:
     - '*'
     destinations:
-    - namespace: argocd
+    - namespace: argo-cd
       server: https://kubernetes.default.svc
     clusterResourceWhitelist:
     - group: '*'
